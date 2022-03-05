@@ -97,7 +97,7 @@ html {
         background-size: cover;
         width: 2rem;
         aspect-ratio: 1; /* same width to make it square */
-        top: 2rem;
+        top: 3rem;
         right: 2rem;
         display: block;
     }

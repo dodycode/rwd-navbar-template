@@ -96,18 +96,18 @@ body {
     .mobile-nav-toggler{
         position: absolute;
         z-index: 9999;
-        background: url(../img/menu-icon.svg);
+        background: url(../img/menu-icon.png);
         background-repeat: no-repeat;
         background-size: cover;
         width: 2rem;
         aspect-ratio: 1; /* same width to make it square */
-        top: 3.8rem;
+        top: 3.5rem;
         right: 2rem;
         display: block;
     }
 
     .mobile-nav-toggler[aria-expanded="true"] {
-        background: url(../img/menu-close.svg);
+        background: url(../img/menu-close.png);
         background-size: contain;
     }
 }

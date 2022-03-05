@@ -1,0 +1,109 @@
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-bg{
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+.logo{
+    width: 60px;
+    margin: 2rem;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.sr-only{
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+
+/* header styles */
+
+.primary-header {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.primary-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-toggler{
+    display: none;
+}
+
+.primary-nav li {
+    display: inherit; /* fix weird bug */
+}
+
+.primary-nav li > a{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #eaeaea;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+}
+
+/* desktop devices */
+@media screen and (min-width: 55em) {
+    .primary-header{
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .primary-nav{
+        --gap: 3rem;
+        padding-right: 2rem;
+    }
+}
+
+/* mobile devices */
+@media screen and (max-width: 35em) {
+    .primary-nav{
+        background: hsl(0,0%,0%, 0.75);
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+        z-index: 1000;
+        --gap: 2rem;
+        transform: translateX(100%);
+        transition: transform 350ms ease-in-out;
+    }
+
+    .primary-nav[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggler{
+        position: absolute;
+        z-index: 9999;
+        background: url(../img/menu-icon.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 2rem;
+        aspect-ratio: 1; /* same width to make it square */
+        top: 2rem;
+        right: 2rem;
+        display: block;
+    }
+
+    .mobile-nav-toggler[aria-expanded="true"] {
+        background: url(../img/menu-close.svg);
+        background-size: contain;
+    }
+}

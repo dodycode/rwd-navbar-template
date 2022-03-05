@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Design</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <header class="main-bg">
+        <div class="primary-header flex">
+            <div>
+                <img src="img/logo.png" alt="" class="logo">
+            </div>
+
+            <button class="mobile-nav-toggler" 
+                aria-controls="primary-nav" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
+
+            <nav>
+                <ul id="primary-nav" data-visible="false" class="primary-nav flex">
+                    <li class="active">
+                        <a href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Destination
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Crew
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Technology
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script src="js/nav.js" defer></script>
+</body>
+</html>

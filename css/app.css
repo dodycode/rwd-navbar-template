@@ -3,6 +3,10 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    overflow: hidden;
+}
+
 .main-bg{
     background-image: url('../img/bg.jpg');
     background-size: cover;
@@ -97,7 +101,7 @@ html {
         background-size: cover;
         width: 2rem;
         aspect-ratio: 1; /* same width to make it square */
-        top: 3rem;
+        top: 3.8rem;
         right: 2rem;
         display: block;
     }
